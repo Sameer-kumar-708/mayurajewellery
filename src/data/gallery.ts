@@ -14,7 +14,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Bridal Splendor Set",
     category: "Bridal Ornaments",
     image:
-      "https://images.unsplash.com/photo-1611591475806-53867c427382?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1707222609380-fe23be31c883?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     alt: "Handcrafted traditional bridal gold necklace set",
     description: "Opulent bridal choker set crafted for festive celebration and wedding grandeur.",
   },
@@ -51,7 +51,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Boutique Showcase Display",
     category: "In-Store Showcase",
     image:
-      "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1650389236412-e7413cbcf2fe?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     alt: "Illuminated jewellery boutique velvet display trays",
     description: "Experience our collection firsthand under warm boutique lighting in Kurla West.",
     isStoreAmbiance: true,

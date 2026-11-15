@@ -64,7 +64,7 @@ export const products: Product[] = [
     name: "Traditional Gold Rani Haar",
     category: "Gold Jewellery",
     image:
-      "https://images.unsplash.com/photo-1611591475806-53867c427382?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1787769499983-cf60247272c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     styleTag: "Timeless Classic",
     metalDetail: "Celebration Special",
     description: "A royal multi-layered gold necklace that brings unmatched majesty to auspicious celebrations.",

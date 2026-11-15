@@ -18,7 +18,7 @@ export const categories: Category[] = [
     subtitle: "Pure Traditional Artistry",
     description: "Intricately designed traditional & modern 22K gold ornaments crafted for celebratory elegance.",
     image:
-      "https://images.unsplash.com/photo-1611591475806-53867c427382?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1651160670627-2896ddf7822f?q=80&w=768&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     enquiryType: "gold",
     badge: "Bestseller",
   },
