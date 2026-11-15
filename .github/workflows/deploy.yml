@@ -42,9 +42,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN || vars.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID || vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID || vars.VERCEL_PROJECT_ID }}
 
     steps:
       - name: 1. Checkout Repository Code
@@ -58,11 +58,19 @@ jobs:
       - name: 3. Install Vercel CLI
         run: npm install --global vercel@latest
 
-      - name: 4. Pull Vercel Environment Configuration
-        run: vercel pull --yes --environment=production
+      - name: 4. Validate Vercel Credentials
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::error::VERCEL_TOKEN is not defined in GitHub! Please add it to GitHub Settings -> Secrets."
+            exit 1
+          fi
+          echo "VERCEL_TOKEN is present."
 
-      - name: 5. Build Production Artifacts with Vercel
-        run: vercel build --prod
+      - name: 5. Pull Vercel Environment Configuration
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
 
-      - name: 6. Deploy Prebuilt Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod
+      - name: 6. Build Production Artifacts with Vercel
+        run: vercel build --prod --token="$VERCEL_TOKEN"
+
+      - name: 7. Deploy Prebuilt Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
